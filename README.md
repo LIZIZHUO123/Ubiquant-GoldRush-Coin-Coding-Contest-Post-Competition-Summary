@@ -56,7 +56,7 @@ $$
 
 * $p_i$: position after step $i$; $\gamma\in(0,1)$.
 * $\rho(p)$: **regional multiplier** (see Step 3).
-* $L_i=\lceil X\%\cdot \text{gold}_{i-1}\rceil$: loss if stepping on bomb (with holdings $\text{gold}_{i-1}$).
+* Li = ceil(X% * gold_{i-1}): loss if stepping on bomb (with holdings gold_{i-1}).  
   If no valid action, fallback: greedy 3 steps toward center.
 
 ---
@@ -150,7 +150,7 @@ c(e)=
 \end{cases}
 $$
 
-3. Simulate $H=18$ steps with turn-based play (opponent first, using heuristic). Track $\text{Gain}_{\text{plan}}(u)$ vs. $\text{Gain}_{\text{base}}$
+3. Simulate $H=18$ steps with turn-based play (opponent first, using heuristic). Track Gain_plan(u) and Gain_base
 4. Net gain gate:
 
 $$
@@ -168,9 +168,7 @@ Current holdings $g$, bomb threshold $\theta_b$.
 * If $g>\theta_b$, reject any move onto bomb.
 * If $g\le \theta_b$, allow only if **expected net gain non-negative**:
 
-$$
-\mathbb{E}[\text{future gain}] - \lceil X\%\cdot g\rceil \ \ge 0
-$$
+Expected future gain − ⌈X% · g⌉ ≥ 0
 
 Future gain approximated by short-horizon simulation.
 
@@ -222,11 +220,7 @@ $$
 \Delta(u)=\text{Gain}_{\text{plan}}(u)-\text{Gain}_{\text{base}},\quad \max_u \Delta(u)\ge \tau
 $$
 
-5. Bomb net condition:
-
-$$
-\mathbb{E}[\text{future gain}] - \lceil X\%\cdot g\rceil \ge 0
-$$
+5. Bomb net condition: Expected future gain − ⌈X% · g⌉ ≥ 0
 
 ---
 
@@ -302,3 +296,4 @@ Our weights `w(o_dist-p_dist)`,`1/p_dist^2`, and bomb thresholds are grid analog
 ---
 
 **Conclusion**: The essence of this problem is extracting “realizable excess return” under **latency, congestion, and impact**. Strategies must jointly optimize signal quality, execution priority, and risk costs.
+
