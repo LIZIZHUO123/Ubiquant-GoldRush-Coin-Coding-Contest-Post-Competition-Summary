@@ -1,6 +1,8 @@
 Ubiquant: GoldRush Coin Coding Contest
+
 Post-Competition Summary
-Team Members:
+
+**Team Members**:
 
     Ningfeng Guo, Central University of Finance and Economics
     Yitong Zhang, Peking University
@@ -296,4 +298,5 @@ Our weights `w(o_dist-p_dist)`,`1/p_dist^2`, and bomb thresholds are grid analog
 ---
 
 **Conclusion**: The essence of this problem is extracting “realizable excess return” under **latency, congestion, and impact**. Strategies must jointly optimize signal quality, execution priority, and risk costs.
+
 
